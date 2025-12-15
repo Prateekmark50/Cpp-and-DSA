@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[1000];
+    int n; 
+    cout<<"Enter the size of array:";
+    cin>>n;
+    cout<<"Enter the element of array:";
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    // For Sorting  the Array
+    for(int i=n-2;i>=0;i--)
+    {
+        for(int j=i;j<n-1;j++)
+        {
+            if(arr[j]>arr[j+1])
+            swap(arr[j],arr[j+1]);
+            else
+            break;
+        }
+    }
+    // For Printing Sort Array
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
